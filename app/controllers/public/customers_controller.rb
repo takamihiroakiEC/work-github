@@ -24,7 +24,6 @@ class Public::CustomersController < ApplicationController
 
   end
 
-
   def withdraw
     @customer = current_customer
     @customer.update(is_active: false)
