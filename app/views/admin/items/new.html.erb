@@ -1,0 +1,20 @@
+<div class="container">
+ <div class="row">
+  <div class="col-4">
+    <h4><span class="bg-secondary">商品新規登録</span></h4>
+  </div>
+  <div class="row">
+   <div class="col-7">
+        <%= form_with model: @item, url:admin_items_path, method: :post do |f| %>
+         <h6>商品画像      <%= f.file_field :image, accept: "image/*" %></h6>
+         <h6>商品名        <%= f.text_field :name %></h6>
+         <h6>商品説明      <%= f.text_area :introduction %></h6>
+         <h6>税抜価格      <%= f.number_field :price %>円</h6>
+         </br>
+
+         <%= f.submit '新規登録', class:"btn btn-success" %>
+        <% end %>
+    </div>
+  </div>
+ </div>
+</div>
